@@ -6,7 +6,7 @@ jobs:
       - image: circleci/mariadb:10.4
     environment:
       - DB_CONNECTION: circle_testing
-    working_directory: ~/ci-demo
+    working_directory: ~/laravel-circleci-demo2
     steps:
       - checkout
       - run:
@@ -17,7 +17,7 @@ jobs:
           command: sudo docker-php-ext-install pdo_mysql
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "composer.json" }}
+            - v1-dependencies-{{ checksum "laravel-circleci-demo2/composer.json" }}
             - v1-dependencies-
       - run:
           name: Install PHP libraries
