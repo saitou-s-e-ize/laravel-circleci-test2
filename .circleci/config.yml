@@ -4,8 +4,9 @@ jobs:
     docker:
       - image: buildpack-deps:trusty
     steps:
+      - slack/status: "https://hooks.slack.com/services/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"
       - run: exit 0
-      - slack/status
+      
 
 
 orbs:
