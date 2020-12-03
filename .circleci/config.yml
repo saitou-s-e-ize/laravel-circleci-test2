@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: exit 0
       - slack/status:
-          webhook: "https://hooks.slack.com/services/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"
+          webhook: "https://hooks.slack.com/services/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"
 
 orbs:
   slack: circleci/slack@3.4.2
