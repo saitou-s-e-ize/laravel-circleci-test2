@@ -1,14 +1,15 @@
 jobs:
-  slack-notification:
-    docker:
-      - image: buildpack-deps:trusty
-    steps:
-      - run: exit 0
-      - slack/status
+  slack-notification:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - run: exit 0
+      - slack/status
+
 orbs:
-  slack: circleci/slack@3.4.2
-version: 2.1
+  slack: circleci/slack@3.4.2
+version: 2.1
 workflows:
-  my-workflow:
-    jobs:
-      - slack-notification
+  my-workflow:
+    jobs:
+      - slack-notification
